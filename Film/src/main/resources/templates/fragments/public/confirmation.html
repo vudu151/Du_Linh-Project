@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h3>
+        Registered successfully <span th:text="${session.my_account.getUserName()}"></span>   <!--thong bao ten nguoi dung dang ki thanh cong-->
+    </h3>
+    <a th:href="@{/loginPage}">Login</a>
+</div>
+
+</body>
+</html>
