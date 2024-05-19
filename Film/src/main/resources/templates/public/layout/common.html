@@ -1,0 +1,38 @@
+<!doctype html SYSTEM  "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" th:fragment="main-fragment(title, cssResources, jsResources, mainContent)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone-no">
+    <title>Trang chủ</title>
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600'/>
+    <!-- Mobile specific meta -->
+    <!--Icon -->
+    <link rel="icon" th:href="@{public/images/movie-reel.png}">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" th:href="@{/public/css/plugins.css}">
+    <link rel="stylesheet" th:href="@{/public/css/style.css}">
+    <th:block th:replace="${cssResources} ?: ~{}"></th:block>
+
+</head>
+<body>
+    <th:block th:replace="~{public/layout/login :: login}"></th:block>
+    <th:block th:replace="~{public/layout/signup :: signup}"></th:block>
+    <th:block th:replace="~{public/layout/header :: header}"></th:block>
+    <th:block th:replace="~{public/layout/slider :: slider}"></th:block>
+    <!-- MAIN-->
+    <th:block th:replace="${mainContent} ?: ~{}"></th:block>
+    <!-- FOOTER -->
+    <th:block th:replace="~{public/layout/footer :: footer}"></th:block>
+<!-- HEADER -->
+<script th:src="@{/public/js/jquery.js}"></script>
+<script th:src="@{/public/js/plugins.js}"></script>
+<script th:src="@{/public/js/plugins2.js}"></script>
+<script th:src="@{/public/js/custom.js}"></script>
+<th:block th:replace="${jsResources} ?: ~{}"></th:block>
+</body>
+</html>

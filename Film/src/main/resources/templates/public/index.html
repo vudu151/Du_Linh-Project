@@ -16,11 +16,11 @@
     <meta name="format-detection" content="telephone-no">
 
     <!--Icon -->
-    <link rel="icon" href="/public/images/movie-reel.png">
+    <link rel="icon" th:href="@{/public/images/movie-reel.png}">
 
     <!-- CSS files -->
-    <link rel="stylesheet" href="/public/css/plugins.css">
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" th:href="@{/public/css/plugins.css}">
+    <link rel="stylesheet" th:href="@{/public/css/style.css}">
 </head>
 <body>
     <div th:insert="fragments/public/preloader::preloader"></div>
@@ -34,9 +34,9 @@
     <div th:insert="fragments/public/footer::footer"></div>
 
 
-    <script src="/public/js/jquery.js"></script>
-    <script src="/public/js/plugins.js"></script>
-    <script src="/public/js/plugins2.js"></script>
-    <script src="/public/js/custom.js"></script>
+    <script th:src="@{/public/js/jquery.js}"></script>
+    <script th:src="@{/public/js/plugins.js}"></script>
+    <script th:src="@{/public/js/plugins2.js}"></script>
+    <script th:src="@{/public/js/custom.js}"></script>
 </body>
 </html>

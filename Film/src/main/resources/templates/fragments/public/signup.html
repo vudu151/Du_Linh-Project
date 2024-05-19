@@ -14,12 +14,13 @@
 
 <!--                <div th:if="${my_error}" class="row">-->
 <!--                    <span th:text="${my_error}" class="alert alert-danger"></span>-->
+<!--                pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required"-->
 <!--                </div>-->
 
                 <div class="row">
                     <label>
                         Username:
-                        <input type="text" th:field="*{userName}" placeholder="Enter your username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+                        <input type="text" th:field="*{userName}" placeholder="Enter your username"  />
                     </label>
 <!--                    <div th:if="${#fields.hasErrors('userName')}">-->
 <!--                        <ul>-->

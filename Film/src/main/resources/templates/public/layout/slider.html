@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <div class="slider movie-items" th:fragment="slider">
+<th:block th:fragment="slider" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+    <div class="slider movie-items">
         <div class="container">
             <div class="row">
                 <div class="social-link">
@@ -18,7 +12,7 @@
                 <div  class="slick-multiItemSlider">
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider1.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider1.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -30,7 +24,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider2.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider2.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -42,7 +36,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider3.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider3.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -54,7 +48,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider4.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider4.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -66,7 +60,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider1.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider1.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -78,7 +72,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <a href="#"><img th:src="@{/public/images/uploads/slider2.jpg}" alt="" width="285" height="437"></a>
+                            <a href="#"><img th:src="@{public/images/uploads/slider2.jpg}" alt="" width="285" height="437"></a>
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -90,7 +84,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <img th:src="@{/public/images/uploads/slider3.jpg}" alt="" width="285" height="437">
+                            <img th:src="@{public/images/uploads/slider3.jpg}" alt="" width="285" height="437">
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -102,7 +96,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <img th:src="@{/public/images/uploads/slider4.jpg}" alt="" width="285" height="437">
+                            <img th:src="@{public/images/uploads/slider4.jpg}" alt="" width="285" height="437">
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -114,7 +108,7 @@
                     </div>
                     <div class="movie-item">
                         <div class="mv-img">
-                            <img th:src="@{/public/images/uploads/slider3.jpg}" alt="" width="285" height="437">
+                            <img th:src="@{public/images/uploads/slider3.jpg}" alt="" width="285" height="437">
                         </div>
                         <div class="title-in">
                             <div class="cate">
@@ -128,5 +122,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+</th:block>
