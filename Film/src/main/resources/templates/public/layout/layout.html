@@ -1,0 +1,45 @@
+<!doctype html SYSTEM  "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org" th:fragment="main-fragment(title, cssResources, mainContent, jsResources)">
+<head>
+    <!-- Basic need -->
+    <title>Block Buster</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="profile" href="#">
+    <!--Google Font-->
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:400,700,500|Nunito:300,400,600' />
+    <!-- Mobile specific meta -->
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone-no">
+    <!--Icon -->
+    <link rel="icon" th:href="@{/public/images/movie-reel.png}">
+    <!-- CSS files -->
+    <link rel="stylesheet" th:href="@{/public/css/plugins.css}">
+    <link rel="stylesheet" th:href="@{/public/css/style.css}">
+
+    <th:block th:replace="${cssResources} ?: ~{}"></th:block>
+</head>
+<body>
+
+<!--Header-->
+<th:block th:replace="~{public/layout/preloader :: preloader}"></th:block>
+<th:block th:replace="~{public/layout/header :: header}"></th:block>
+
+<!--Main-->
+<th:block th:replace="${mainContent} ?: ~{}"></th:block>
+
+<!--Footer-->
+<th:block th:replace="~{public/layout/footer :: footer}"></th:block>
+
+<script th:src="@{/public/js/jquery.js}"></script>
+<script th:src="@{/public/js/plugins.js}"></script>
+<script th:src="@{/public/js/plugins2.js}"></script>
+<script th:src="@{/public/js/custom.js}"></script>
+
+<th:block th:replace="${jsResources} ?: ~{}"></th:block>
+</body>
+</html>
